@@ -58,5 +58,5 @@ if __name__ == "__main__":
     host = os.getenv("MCP_HOST", "0.0.0.0")
     port = int(os.getenv("MCP_PORT", "8000"))
     
-    # Use HTTP transport for server deployment
-    mcp.run(transport="http")
+    # Use fastapi transport for server deployment
+    mcp.run(transport="fastapi", host=host, port=port)

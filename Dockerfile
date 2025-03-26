@@ -9,7 +9,8 @@ COPY README.md .
 
 # Install dependencies
 RUN pip install --no-cache-dir pip -U && \
-    pip install --no-cache-dir .
+    pip install --no-cache-dir . && \
+    pip install --no-cache-dir fastapi uvicorn
 
 # Expose the port MCP server will run on
 EXPOSE 8000
