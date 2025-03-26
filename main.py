@@ -59,4 +59,9 @@ if __name__ == "__main__":
     port = int(os.getenv("MCP_PORT", "8000"))
     
     # Use fastapi transport for server deployment
-    mcp.run(transport="fastapi", host=host, port=port)
+    # Set environment variables that FastAPI will use
+    os.environ["FASTAPI_HOST"] = host
+    os.environ["FASTAPI_PORT"] = str(port)
+    
+    # Run with fastapi transport without direct host/port parameters
+    mcp.run(transport="fastapi")
