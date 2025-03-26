@@ -59,4 +59,4 @@ if __name__ == "__main__":
     port = int(os.getenv("MCP_PORT", "8000"))
     
     # Use HTTP transport for server deployment
-    mcp.run(transport="http", host=host, port=port)
+    mcp.run(transport="http")
