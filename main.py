@@ -64,4 +64,4 @@ if __name__ == "__main__":
     os.environ["FASTAPI_PORT"] = str(port)
     
     # Run with fastapi transport without direct host/port parameters
-    mcp.run(transport="fastapi")
+    mcp.run()
